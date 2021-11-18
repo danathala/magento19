@@ -51,14 +51,30 @@ class Services_Aws_Helper_Data extends Mage_Core_Helper_Abstract
         }
         $requestParams['region'] = array("DataType" => "String", "StringValue" => Mage::getStoreConfig(self::AWS_REGION));
 
+        /** SET the SQS Url */
+        $sqsUrl = self::AWS_SQS_URL_SMS;
+        if (!empty($params['actionCode'])) {
+            switch ($params['actionCode']) {
+                case 'sms':
+                    $sqsUrl = self::AWS_SQS_URL_SMS;
+                    break;
+                case 'email':
+                    $sqsUrl = self::AWS_SQS_URL_EMAIL;
+                    break;
+                case 'curl':
+                    $sqsUrl = self::AWS_SQS_URL_CURL;
+                    break;
+            }
+        }
+
         $sqsParams = [
             'MessageBody' => $message,
-            'QueueUrl' => Mage::getStoreConfig(self::AWS_SQS_URL_SMS),
+            'QueueUrl' => Mage::getStoreConfig($sqsUrl),
             'MessageAttributes' => $requestParams,
         ];
 
         try {
-            $result = $this->_client->sendMessage($sqsParams);
+            $result = $this->_client->sendMessageAsync($sqsParams);
         } catch (AwsException $e) { // Save the Error log if needed
 
         }
