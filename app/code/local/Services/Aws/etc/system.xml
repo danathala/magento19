@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * @category    Services
+ * @package     Services_AWS
+ */
+ -->
+<config>
+    <tabs>
+        <custom_services translate="label" module="aws_services">
+            <label>Custom Services</label>
+            <sort_order>100</sort_order>
+        </custom_services>
+    </tabs>
+    <sections>
+        <aws_services translate="label" module="aws_services">
+            <label>AWS</label>
+            <tab>custom_services</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <settings translate="label">
+                    <label>General Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <config_path>aws_services/settings/active</config_path>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </active>
+                        <access_key_id translate="label">
+                            <label>Access Key Id</label>
+                            <config_path>aws_services/settings/access_key_id</config_path>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </access_key_id>
+                        <secret_access_key translate="label">
+                            <label>Secret Access Key</label>
+                            <config_path>aws_services/settings/secret_access_key</config_path>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </secret_access_key>
+                        <region translate="label">
+                            <label>Region</label>
+                            <config_path>aws_services/settings/region</config_path>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </region>
+                        <version translate="label">
+                            <label>Version</label>
+                            <config_path>aws_services/settings/version</config_path>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </version>
+                        <sqs_url_config translate="label">
+                            <label>SQS URL Settings</label>
+                            <frontend_model>adminhtml/system_config_form_field_heading</frontend_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sqs_url_config>
+                        <sqs_url_sms translate="label">
+                            <label>SMS</label>
+                            <config_path>aws_services/settings/sqs_url_sms</config_path>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sqs_url_sms>
+                        <sqs_url_email translate="label">
+                            <label>Email</label>
+                            <config_path>aws_services/settings/sqs_url_email</config_path>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sqs_url_email>
+                        <sqs_url_curl translate="label">
+                            <label>Curl Request</label>
+                            <config_path>aws_services/settings/sqs_url_curl</config_path>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </sqs_url_curl>
+                    </fields>
+                </settings>
+            </groups>
+        </aws_services>
+    </sections>
+</config>

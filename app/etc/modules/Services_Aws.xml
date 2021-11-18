@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * @category    Services
+ * @package     Services_AWS
+ */
+ -->
+<config>
+    <modules>
+        <Services_Aws>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Services_Aws>
+    </modules>
+</config>

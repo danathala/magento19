@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * @category    Services
+ * @package     Services_AWS
+ */
+ -->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <aws_services translate="title" module="aws_services">
+                                        <title>AWS Services</title>
+                                        <sort_order>999</sort_order>
+                                    </aws_services>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

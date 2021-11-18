@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * @category    Services
+ * @package     Services_Aws
+ */
+-->
+<config>
+    <modules>
+        <Services_Aws>
+            <version>0.0.1</version>
+        </Services_Aws>
+    </modules>
+    <global>
+        <models>
+            <aws_services>
+                <class>Services_Aws_Model</class>
+            </aws_services>
+        </models>
+        <helpers>
+            <aws_services>
+                <class>Services_Aws_Helper</class>
+            </aws_services>
+        </helpers>
+        <blocks>
+            <aws_services>
+                <class>Services_Aws_Block</class>
+            </aws_services>
+        </blocks>
+    </global>
+</config>

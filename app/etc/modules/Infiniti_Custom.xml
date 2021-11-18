@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * @category    Infiniti
+ * @package     Infiniti_Custom
+ */
+ -->
+<config>
+    <modules>
+        <Infiniti_Custom>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Infiniti_Custom>
+    </modules>
+</config>

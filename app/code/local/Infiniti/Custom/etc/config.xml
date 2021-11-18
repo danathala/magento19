@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * @category    Infiniti
+ * @package     Infiniti_Custom
+ */
+-->
+<config>
+    <modules>
+        <Infiniti_Custom>
+            <version>0.0.1</version>
+        </Infiniti_Custom>
+    </modules>
+    <global>
+        <models>
+            <infiniti_custom>
+                <class>Infiniti_Custom_Model</class>
+            </infiniti_custom>
+        </models>
+        <helpers>
+            <infiniti_custom>
+                <class>Infiniti_Custom_Helper</class>
+            </infiniti_custom>
+        </helpers>
+        <blocks>
+            <infiniti_custom>
+                <class>Infiniti_Custom_Block</class>
+            </infiniti_custom>
+        </blocks>
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <mumzworld_custom_sales_order_place_after>
+                        <class>infiniti_custom/observer</class>
+                        <method>sendOrderCommunicationMessage</method>
+                    </mumzworld_custom_sales_order_place_after>
+                </observers>
+            </sales_order_place_after>
+        </events>
+    </global>
+</config>
