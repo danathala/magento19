@@ -21,11 +21,9 @@ class Infiniti_Custom_Model_Observer extends Varien_Object
     const ORDER_CONFIRMATION_OPERATIONS_EMAIL_MESSAGE       = 'infiniti_custom/sales_communication/send_email_operations_message';
     const ORDER_CONFIRMATION_ERP_INTEGRATION_ENABLED        = 'infiniti_custom/sales_communication/send_orderinfo_erp_active';
 
-    //public function sendOrderCommunicationMessage($observer)
-    public function sendOrderCommunicationMessage()
+    public function sendOrderCommunicationMessage($observer)
     {
-        $order = Mage::getModel('sales/order')->loadByIncrementId(200000001);
-        //$order = $observer->getEvent()->getOrder();
+        $order = $observer->getEvent()->getOrder();
         if (!$order) {
             return $this;
         }
